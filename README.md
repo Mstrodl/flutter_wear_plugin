@@ -4,6 +4,18 @@ A plugin that offers Flutter support for Wear OS by Google (Android Wear).
 
 __To use this plugin you must set your `minSdkVersion` to `23`.__
 
+# Required Changes
+Open `MainActivity.kt`, and change the inheritance like so:
+
+```kt
+class MainActivity: FlutterFragmentActivity(), WearProvider by WearProvider.Delegate.instance {
+```
+
+Open `build.gradle` and add the following to your `depedencies`:
+
+```groovy
+compileOnly 'androidx.wear:wear:1.2.0'
+```
 
 # Tutorial
 

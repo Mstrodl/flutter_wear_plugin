@@ -1,6 +1,7 @@
 package com.mjohnsullivan.flutterwear.wear_example
 
-import io.flutter.embedding.android.FlutterActivity
+import com.mjohnsullivan.flutterwear.wear.WearProvider
+import io.flutter.embedding.android.FlutterFragmentActivity
 
-class MainActivity: FlutterActivity() {
+class MainActivity: FlutterFragmentActivity(), WearProvider by WearProvider.Delegate.instance {
 }
